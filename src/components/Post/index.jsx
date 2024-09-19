@@ -1,8 +1,8 @@
-const Post = ()=>{
+const Post = ({data})=>{
     return <div>
         <img src='' alt='post-image' />
-        <h2>Title</h2>
-        <p>Content about the post</p>
+        <h2>{data.title}</h2>
+        <p>{data.content}</p>
         <button type='button'>Edit Post</button>
         <button type="button">Delete Post</button>
         <hr />
