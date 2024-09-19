@@ -28,8 +28,8 @@ const Home = ()=>{
       
         changeState({showInput:false , title:"" , content:''})
     }
-    const saveData = ()=>{
-        const url = 'dummy.com'
+    const saveData =async ()=>{
+        const url = 'https://blog-post-be.vercel.app/new-entry'
         const options = {
             method:'POST',
             headers:{
@@ -37,11 +37,12 @@ const Home = ()=>{
                 'Accept':'Application/json',
                 'Authentication':'Bearer 1234567890'
             },
-            body:JSON.stringify(posts)
+            // body:JSON.stringify(posts)
             
         }
 
-        const result = fetch(url, options)
+        const result =await fetch(url, options)
+        console.log(result)
         console.log('Fetch Activated')
     }
     
